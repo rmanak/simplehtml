@@ -24,15 +24,15 @@ Simply clone the repository and run ``make``:
 
 for the html pages to be generated.
 
-### Adding a new page
+#### Adding a new page
 
 Create a new file ``mynewfile.txt`` and add it to the list of pages in the ``Makefile``.
 
-### Adding a link to the sidebar
+#### Adding a link to the sidebar
 
 Edit the file ``sidebar`` (it's format is the same as Markdown)
 
-### Formatting
+#### Formatting
 
 The template's content (either ``index.html`` or ``Template.html``) files that are
 generated describe how the template work. See ``Template.txt`` for the source code 
@@ -40,7 +40,7 @@ of how to create table of content, references, including other HTML files and
 more examples.
 
 
-### Editing the template
+#### Editing the template
 
 Edit the file ``template``.
 
@@ -51,6 +51,14 @@ Requirements
 - perl
 - linux make
 (all the markdown, code2html and pyhat scripts are included in the folder)
+
+
+Credit
+------
+
+* [Markdown](http://daringfireball.net/projects/markdown/)
+* [Code2Html](https://www.palfrader.org/code/code2html/)
+* [PyHat](http://www.ferg.org/pyhat/)
 
 
 
