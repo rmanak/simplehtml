@@ -62,7 +62,7 @@ wherever you like the TOC to appear, (uses ``<h1>`` ``<h2>`` tags, needs h1 to w
 **1.3.5 Including source code that will be highlighted**
 
     <PYTHON>
-    import panda as pd
+    import numpy as np
     </PYTHON>
 
 **1.3.6 Including an external HTML file**
