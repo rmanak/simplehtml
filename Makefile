@@ -19,6 +19,7 @@ sidebar.pm: sidebar
 	cat $*.txt globalauthor globalkeywords globaldescription  > $*.txt2
 	./find_code.pl < $*.txt2 > $*.s
 	/bin/rm -f *.txt2
+	/bin/rm -f tmp_code_123 tmp_code_1234
 
 %.w: %.s
 	./Markdown.pl $*.s > $*.w
