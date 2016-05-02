@@ -3,13 +3,20 @@ Simple HTML
 
 This is a quick webpage generator and content management system 
 powered by perl that combines all the good stuff from:
+
 * Markdown
 * code2html (for code highlighting)
 * PyHat (for table of content generator)
+
+with my own addition of: 
+
 * References (similar to wikipedia) 
-* and some additional quick features, such as including 
-(right or centered float) images with caption, including
-other html files 
+* Latex (needed some hacking to markdown script) to get it to work with MathJax
+* Quick centered/right floating images with caption
+* Include other HTML files
+* All fonts included
+* All scripts are included, no need to download anything beside the project
+
 
 See the homepage of the project: <http://laplace.phas.ubc.ca/People/arman/sg/>
 ![alt tag](https://github.com/rmanak/simplehtml/blob/master/img/screenshot.png)
