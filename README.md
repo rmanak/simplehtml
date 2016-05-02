@@ -2,7 +2,7 @@ Simple HTML
 ===========
 
 This is a quick webpage generator and content management system 
-powered by perl that combines all the good stuff from:
+powered by Perl that combines all the good stuff from:
 
 * Markdown
 * code2html (for code highlighting)
@@ -10,7 +10,7 @@ powered by perl that combines all the good stuff from:
 
 with my own addition of: 
 
-* References (similar to wikipedia) 
+* References (similar to Wikipedia) 
 * Latex (needed some hacking to markdown script) to get it to work with MathJax
 * Quick centered/right floating images with caption
 * Include other HTML files
@@ -42,9 +42,10 @@ Edit the file ``sidebar`` (it's format is the same as Markdown)
 #### 1.3 Formatting
 
 The template's content (either ``index.html`` or ``Template.html``) files that are
-generated describe how the template work. See ``Template.txt`` for the source code 
-of how to create table of content, references, including other HTML files and 
-more examples. Some additional formatting (beside all markdown formatting) are as following
+generated describe how the template works. For example see ``Template.txt`` for the source code 
+of ``Template.html`` to get an idea of what are the additions to markdown syntax.
+
+Here is a quick summary of how-to's: 
 
 **1.3.1 Including a table of content** to document, just put: 
 
@@ -98,10 +99,10 @@ Edit the file ``template``.
 ----------------
 
 - python
-- perl
-- linux make
+- Perl
+- Linux make
 
-(all the markdown, code2html and pyhat scripts are included in the folder)
+(all the markdown, code2html and PyHat scripts are included in the folder)
 
 
 3. Credit
