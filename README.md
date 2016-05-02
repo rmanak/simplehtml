@@ -39,7 +39,7 @@ generated describe how the template work. See ``Template.txt`` for the source co
 of how to create table of content, references, including other HTML files and 
 more examples. Some additional formatting (beside all markdown formatting) are as following
 
-1.3.1 Including a table of content to document, just put: (uses ``<h1>`` ``<h2>`` tags, needs h1 to work)
+###### 1.3.1 Including a table of content to document, just put: (uses ``<h1>`` ``<h2>`` tags, needs h1 to work)
 
     [TOC]
 
@@ -90,6 +90,7 @@ Edit the file ``template``.
 - python
 - perl
 - linux make
+
 (all the markdown, code2html and pyhat scripts are included in the folder)
 
 
