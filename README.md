@@ -14,3 +14,32 @@ other html files
 See the homepage of the project: <http://laplace.phas.ubc.ca/People/arman/sg/>
 ![alt tag](https://github.com/rmanak/simplehtml/blob/master/img/screenshot.png)
 
+
+Quick Start
+-----------
+
+Simply clone the repository and run ``make``:
+
+    [bash]$make
+
+for the html pages to be generated.
+
+### Adding a new page
+
+Create a new file ``mynewfile.txt`` and add it to the list of pages in the ``Makefile``.
+
+### Adding a link to the sidebar
+
+Edit the file ``sidebar`` (it's format is the same as Markdown)
+
+
+
+Requirements
+------------
+- python
+- perl
+- linux make
+(all the markdown, code2html and pyhat scripts are included in the folder)
+
+
+
