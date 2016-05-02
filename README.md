@@ -39,38 +39,41 @@ generated describe how the template work. See ``Template.txt`` for the source co
 of how to create table of content, references, including other HTML files and 
 more examples. Some additional formatting (beside all markdown formatting) are as following
 
-###### 1.3.1 Including a table of content to document, just put: (uses ``<h1>`` ``<h2>`` tags, needs h1 to work)
+**1.3.1 Including a table of content** to document, just put: 
 
     [TOC]
 
-* Creating a reference:
+wherever you like the TOC to appear, (uses ``<h1>`` ``<h2>`` tags, needs h1 to work)
+
+
+**1.3.2 Creating a reference**
 
     A new reference here %%myreftag1%%. Another sentence...
     {myreftag1: See for example: <http://somelinktootherplace.com>}
     
-* Inserting a right floating image with caption: 
+**1.3.3 Inserting a right floating image with caption**
 
     {{my image caption}}((path/to/img/src.img))
 
-* Inserting a center floating image with caption:
+**1.3.4 Inserting a center floating image with caption**
 
     {{my image caption}}[[path/to/img/src.img]]
 
-* Including source code that will be highlighted:
+**1.3.5 Including source code that will be highlighted**
 
     <PYTHON>
     import panda as pd
     </PYTHON>
 
-* Including an external HTML file:
+**1.3.6 Including an external HTML file**
 
     <FILE="myotherhtmlfile.html">
 
-* Writing LaTeX in the text
+**1.3.7 Writing LaTeX in the text**
 
     \\( x^2 + z_1 = 5 \\)
 
-* Writing a large LaTeX content:
+**1.3.8 Writing a large LaTeX content**
 
     <div>
     $$
