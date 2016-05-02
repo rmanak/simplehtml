@@ -12,5 +12,5 @@ powered by perl that combines all the good stuff from:
 other html files 
 
 See the homepage of the project: <http://laplace.phas.ubc.ca/People/arman/sg/>
-[!alt](https://github.com/rmanak/simplehtml/blob/master/img/screenshot.png)
+![alt tag](https://github.com/rmanak/simplehtml/blob/master/img/screenshot.png)
 
