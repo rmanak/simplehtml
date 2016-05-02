@@ -40,6 +40,11 @@ of how to create table of content, references, including other HTML files and
 more examples.
 
 
+### Editing the template
+
+Edit the file ``template``.
+
+
 Requirements
 ------------
 - python
