@@ -98,7 +98,7 @@ Edit the file ``template``.
 2. Requirements
 ----------------
 
-- python
+- Python
 - Perl
 - Linux make
 
