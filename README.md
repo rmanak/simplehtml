@@ -32,6 +32,12 @@ Create a new file ``mynewfile.txt`` and add it to the list of pages in the ``Mak
 
 Edit the file ``sidebar`` (it's format is the same as Markdown)
 
+### Formatting
+
+The template's content (either ``index.html`` or ``Template.html``) files that are
+generated describe how the template work. See ``Template.txt`` for the source code 
+of how to create table of content, references, including other HTML files and 
+more examples.
 
 
 Requirements
