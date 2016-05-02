@@ -40,30 +40,38 @@ of how to create table of content, references, including other HTML files and
 more examples. Some additional formatting (beside all markdown formatting) are as following
 
 * Including a table of content to document, just put: (uses ``<h1>`` ``<h2>`` tags, needs h1 to work)
+
     [TOC]
 
 * Creating a reference:
+
     A new reference here %%myreftag1%%. Another sentence...
     {myreftag1: See for example: <http://somelinktootherplace.com>}
     
 * Inserting a right floating image with caption: 
+
     {{my image caption}}((path/to/img/src.img))
 
 * Inserting a center floating image with caption:
+
     {{my image caption}}[[path/to/img/src.img]]
 
 * Including source code that will be highlighted:
+
     <PYTHON>
     import panda as pd
     </PYTHON>
 
 * Including an external HTML file:
+
     <FILE="myotherhtmlfile.html">
 
 * Writing LaTeX in the text
+
     \\( x^2 + z_1 = 5 \\)
 
 * Writing a large LaTeX content:
+
     <div>
     $$
     g_{\mu \nu} = 8 \pi T_{\mu \nu}
