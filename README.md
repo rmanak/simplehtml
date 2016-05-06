@@ -1,7 +1,7 @@
 Simple HTML
 ===========
 
-This is a quick webpage generator and content management system 
+This is a webpage generator and content management system 
 powered by Perl that combines all the good stuff from:
 
 * Markdown
@@ -17,7 +17,15 @@ with my own addition of:
 * All fonts included
 * All scripts are included, no need to download anything beside the project
 
+Example:
+-------
+For example see this github page created using this tool:
 
+<http://rmanak.github.io/FD/>
+
+
+Software homepage:
+------------------
 See the homepage of the project: <http://laplace.phas.ubc.ca/People/arman/sg/>
 ![alt tag](https://github.com/rmanak/simplehtml/blob/master/img/screenshot.png)
 
