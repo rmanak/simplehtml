@@ -46,15 +46,20 @@ $SIDETXT=&file_to_text($side_file);
 $FOOTBARTXT=&file_to_text($foot_file);
 
 #creating date:
-$lstupddaynum=`date +%d -r $post_filet`;
-chomp $lstupddaynum;
-$lstupddayw=`date +%a -r $post_filet`;
-chomp $lstupddayw;
-$lstupdyear=`date +%Y -r $post_filet`;
-chomp $lstupdyear;
-$lstupdmon=`date +%b -r $post_filet`;
-chomp $lstupdmon;
-$date="$lstupddayw $lstupdmon $lstupddaynum, $lstupdyear";
+# fix for unix using mydate.py
+#$lstupddaynum=`date +%d -r $post_filet`;
+#chomp $lstupddaynum;
+#$lstupddayw=`date +%a -r $post_filet`;
+#chomp $lstupddayw;
+#$lstupdyear=`date +%Y -r $post_filet`;
+#chomp $lstupdyear;
+#$lstupdmon=`date +%b -r $post_filet`;
+#chomp $lstupdmon;
+
+#$date="$lstupddayw $lstupdmon $lstupddaynum, $lstupdyear";
+
+$date = `mydate.py $post_filet`;
+chomp $date;
 
 $title='';
 if ($POSTTXT =~ /(title\s*:=\s*{\s*)([^}]*?)(\s*})/s) {
