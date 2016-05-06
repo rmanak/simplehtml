@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Web Template for Scientists" />
+<meta name="keywords" content="web page template webpage latex in html writing equations
+table of content automatic reference references formatting markdown
+code highlighting scientific documantation pyhat code2html linux
+command line text based course page design scientists science" />
+<meta name="author" content="Arman Akbarian" />
+<link rel="stylesheet" type="text/css" href="pagestyle.css" />
+<title>HTML Formatting</title>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+
+$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+			$('html,body').animate({
+scrollTop: target.offset().top
+}, 500);
+			return false;
+			}
+			}
+			});
+		});
+
+</script>
+
+<body>
+<div class="page">
+  <div class="page2">
+     <div style="width:100%;height:1px;font-family: Tahoma; font-size: 1pt;"></div>
+     <div  class ="header">
+	     <div class="title">
+
+			<img src="img/perl.png" style="float:right" />
+			Page Header
+
+			<div class="subtitle">S U B H E A D E R  </div>
+
+		      <div style="clear: both; height:1px;"></div>
+	</div> <!-- End of title -->
+		
+     </div> <!-- end header -->
+	
+     <!--This line is for future use -->   <div style="text-align:center; padding-top:10px; padding-bottom:10px;"></div>
+	      
+     <!--This line is for compatibility issues --> <div style="width:100%;height:5px;font-family: Tahoma; font-size: 1pt;"></div>
+     <!--in class page2 -->
+     <div class="postandside">
+        <div class="content">
+            <div class="post">
+              <h1>HTML Formatting</h1>
+
+<h2>Paragraphs</h2>
+
+<p>Paragraphs in Markdown are separated with an empty line, 
+for instance:</p>
+
+<pre><code>This is paragraph1.
+This is in the same paragraph.
+
+This is a new paragraph.
+</code></pre>
+
+<p>This is paragraph1.
+This is in the same paragraph.</p>
+
+<p>This is a new paragraph.</p>
+
+<h2>Lists</h2>
+
+<p>Here is how to create lists and sublists:</p>
+
+<pre><code>* item 1
+  * subitem 1
+         * subsub item 1
+  * subitem 2
+         * subsub item 1
+         * subsub item 2
+* item 3
+</code></pre>
+
+<ul>
+<li>item 1
+<ul><li>subitem 1
+<ul><li>subsub item 1</li></ul></li>
+<li>subitem 2
+<ul><li>subsub item 1</li>
+<li>subsub item 2</li></ul></li></ul></li>
+<li>item 3</li>
+</ul>
+
+<h2>Links</h2>
+
+<pre><code>This is [a link](http://en.wikipedia.org/wiki/HTML) example.
+</code></pre>
+
+<p>This is <a href="http://en.wikipedia.org/wiki/HTML">a link</a> example.</p>
+
+<h2>Bold Text</h2>
+
+<pre><code>**This line should appear bold.**
+</code></pre>
+
+<p><strong>This line should appear bold.</strong></p>
+
+<h2>Emphasize</h2>
+
+<pre><code>Example of emphasize: *Emphasized expression*.
+</code></pre>
+
+<p>Example of emphasize: <em>Emphasized expression</em>.</p>
+
+<h2>Quotation</h2>
+
+<p>Here is an example of a quotation:</p>
+
+<pre><code>&gt; There are only 10 types of people in the world:
+&gt; those who understand binary,
+&gt; and those who don't.
+</code></pre>
+
+<blockquote>
+  <p>There are only 10 types of people in the world:
+those who understand binary,
+and those who don't.</p>
+</blockquote>
+
+<h2>Numeric Lists</h2>
+
+<pre><code>List:
+
+1. foo
+2. bar
+</code></pre>
+
+<p>List:</p>
+
+<ol>
+<li>foo</li>
+<li>bar</li>
+</ol>
+
+<h2>Link by ID</h2>
+
+<pre><code>This is [an example][id] of reference-style link.
+
+[id]: http://en.wikipedia.org/wiki/Minions_%28film%29 "Title"
+</code></pre>
+
+<p>This is <a href="http://en.wikipedia.org/wiki/Minions_%28film%29" title="Title">an example</a> of reference-style link.</p>
+
+<h2>Literal Links</h2>
+
+<p>Creating a literal hyperlink:</p>
+
+<pre><code>&lt;http://www.google.com&gt;
+</code></pre>
+
+<p><a href="http://www.google.com">http://www.google.com</a></p>
+
+<h2>Quick Images</h2>
+
+<p>A quick way to insert an image is this:</p>
+
+<pre><code>![Alt text](img/linuxlogo.png)
+</code></pre>
+
+<p><img src="img/linuxlogo.png" alt="Alt text" title="" /></p>
+
+<h2>Code</h2>
+
+<p>Code example:</p>
+
+<pre><code>``for(int i=0;i &lt; n;i++) { a[i] = 0.0}``
+</code></pre>
+
+<p><code>for(int i=0;i &lt; n;i++) { a[i] = 0.0}</code></p>
+
+<h2>Pre-defined Format</h2>
+
+<pre><code>This is pre defined format, just shift the lines by a tab:
+
+    [arman@bh8 ~]$ ls -ltr
+    drwxr-xr-x  3 arman choptuik     24576 Aug 31 17:27 BSSN_Axi_compact/
+    drwxr-xr-x  3 arman choptuik     20480 Aug 31 17:27 BSSN_Spher/
+    drwxr-xr-x 31 arman choptuik      4096 Sep  2 10:52 examples/
+    drwxr-xr-x  3 arman choptuik      4096 Sep  2 12:24 Downloads/
+</code></pre>
+
+<p>This is pre defined format, just shift the lines by a tab:</p>
+
+<pre><code>[arman@bh8 ~]$ ls -ltr
+drwxr-xr-x  3 arman choptuik     24576 Aug 31 17:27 BSSN_Axi_compact/
+drwxr-xr-x  3 arman choptuik     20480 Aug 31 17:27 BSSN_Spher/
+drwxr-xr-x 31 arman choptuik      4096 Sep  2 10:52 examples/
+drwxr-xr-x  3 arman choptuik      4096 Sep  2 12:24 Downloads/
+</code></pre>
+
+<h2>Drawing Line</h2>
+
+<pre><code>3 or more stars should create a line:
+
+***
+</code></pre>
+
+<p>3 or more stars should create a line:</p>
+
+<hr />
+
+<h2>Differences with Markdown</h2>
+
+<p>I have changed the markdown script so that underscore <code>_</code> does not
+emphasize the text as it does originally in the Markdown syntax.
+The reason is that markdown syntaxing applies to html files before latexing
+that is a JavaScript, and underscore is used extensively in latex syntax.</p>
+
+<p>
+
+</p>
+
+		      <div style="clear: both;"></div>
+	         </div>
+		      <hr />
+				<div class ="date">last update: Sun May 01 2016</div>
+	    <div class="footer">
+           <p><a href="index.html">Home</a>|<a href="format.html">Formatting</a>|<a href="images.html">Images</a>|<a href="toc.html">TOC</a>|<a href="latex.html">LaTeX</a>|<a href="Credit.html">Credit</a>|<a href="download.html">Download</a></p>
+
+      </div>  
+	    <div style="clear: both;">&nbsp;</div>
+        </div> <!-- end content -->
+	<!-- in class postandside -->
+
+        <div class="sidebar">
+         	<div class="sider">
+               <p><a href="README.html">README</a>
+<a href="format.html">HTML Formatting</a>
+<a href="latex.html">Writing \( \LaTeX \) </a>
+<a href="toc.html">TOC &amp; References</a>
+<a href="code.html">Code Highlighting</a>
+<a href="images.html">Images</a>
+<a href="Contact.html">Contact</a>
+<a href="Links.html">Links &amp; Lists</a>
+<a href="Credit.html">Credit</a></p>
+
+<hr />
+
+<p><a href="Template.html">Manual</a>
+<a href="download.html">Getting Started</a>
+<a href="download.html">Download<img src="img/dl.svg" /></a>
+<a href="License.html">License</a></p>
+
+<hr />
+
+<p><a href="page1.html">Browser Page Title</a>
+<a href="page2.html">Page 2</a>
+<a href="page3.html">Page 3</a>
+<a target="_blank" href="../">Arman's page<img style="margin-left:1px;" src="img/external-link.svg" alt="" align="bottom" /></a></p>
+
+             </div>
+         </div> <!--End of Sidebar -->
+
+         <!--in class postandside-->   
+         <!--this line is for compatibility issues --><div style="clear: both;">&#160;</div> <!--Displacement --> 
+     </div> <!--End of post and side -->
+
+     <!-- in class page2 -->
+     <div style="clear: both;">&nbsp;</div>
+  </div> <!--End of Page2 -->
+     <div style="clear: both;">&nbsp;</div>
+
+</div> <!-- End of page -->
+<!--this is end of the file -->
+<!-- ~~~ This content is generated using sg web template ~~-->
+<!-- ~~~ For more information visit: http://laplace.physics.ubc.ca/People/arman/sg ~~ -->
+</body>
+</html>
