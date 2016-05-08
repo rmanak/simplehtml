@@ -22,7 +22,7 @@ Note:
 The keyword in this project is **self-contained**! There are some incredible tools out there,
 including [Kramdown](http://kramdown.gettalong.org/), [Rouge](http://rouge.jneen.net/)
 and [Jekyll](https://jekyllrb.com/) 
-that power github's markdown syntax, highlighting and pages. This tools are arguably better! 
+that power github's markdown syntax, highlighting and pages. These tools are arguably better! 
 However, they require
 a bit of learning curve and some libraries and having ruby 
 installed. To get things working using SimpleHTML, all you need is python, perl and linux make.
