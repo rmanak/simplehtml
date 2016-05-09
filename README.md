@@ -70,9 +70,9 @@ See the homepage of the project: <http://rmanak.github.io/simplehtml/>
 1. Quick Start
 --------------
 
-Simply clone the repository and run ``make``:
+Simply clone the repository and run ``make`` inside one of the theme directories:
 
-    [bash]$make
+    [bash]$ cd theme1; make
 
 for the html pages to be generated.
 
