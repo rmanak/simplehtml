@@ -15,3 +15,6 @@ _tars_updated: _dist theme1
 	./pack_tars.sh
 	echo "all tars updated" > _tars_updated
 
+clean:
+	./clean_themes.sh
+

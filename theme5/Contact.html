@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="Web Template for Scientists" />
@@ -11,45 +12,79 @@ command line text based course page design scientists science" />
 <link rel="stylesheet" type="text/css" href="css/pagestyle.css" />
 <title>Contacts</title>
 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+
+$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+			$('html,body').animate({
+scrollTop: target.offset().top
+}, 500);
+			return false;
+			}
+			}
+			});
+		});
+
+</script>
+
+
 </head>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<script type="text/javascript" src="js/smoothscroll.js"></script>
+<script>
+jQuery("document").ready(function($){
+		    
+	var nav = $('.side2');
+			     
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 200) {
+            nav.fadeIn();
+        } else {
+            nav.fadeOut();
+        }
+    });
+				   
+});
+</script>
 
 
 <body>
-<div class="page">
-  <div class="page2">
-     <div style="width:100%;height:1px;font-family: Tahoma; font-size: 1pt;"></div>
-     <div  class ="header">
-	     <div class="title">
+<div class="page">&nbsp;</div>
+<div class="pagel">&nbsp;</div>
+<div class="page2">
+	<div class="header">
+		<div class="title">Page Header</div>
+		<div class="subtitle">S U B H E A D E R</div>
+   </div>
+	<div style="clear:both"> </div>
+	<div class="navbar">
+           <p><a href="Template.html">Home</a>
+<a href="README.html">README</a>
+<a href="format.html">Formatting</a>
+<a href="latex.html"> LaTeX </a>
+<a href="toc.html">TOC</a>
+<a href="code.html">Code</a>
+<a href="images.html">Images</a>
+<a href="Template.html">Manual</a>
+<a href="download.html">Getting Started</a></p>
 
-			<img src="img/perl.png" style="float:right" />
-			Page Header
-
-			<div class="subtitle">S U B H E A D E R  </div>
-
-		      <div style="clear: both; height:1px;"></div>
-	</div> <!-- End of title -->
-		
-     </div> <!-- end header -->
-	
-     <!--This line is for future use -->   <div style="text-align:center; padding-top:10px; padding-bottom:10px;"></div>
-	      
-     <!--This line is for compatibility issues --> <div style="width:100%;height:5px;font-family: Tahoma; font-size: 1pt;"></div>
-     <!--in class page2 -->
-     <div class="postandside">
-        <div class="content">
-            <div class="post">
-              <h1>Contacts:</h1>
+        </div>
+	<div class="content">
+		<div class="post">
+                <h1>Contacts:</h1>
 
 <p><address>
 6224 Agricultural Rd,<br />
 Vancouver, B. C. V6T1Z1 <br />
 Department of Physics and Astronomy<br />
 University of British Columbia<br />
-E-mail: <a href="&#x6D;&#x61;i&#108;&#x74;&#x6F;:&#97;&#114;&#x6D;&#x61;&#x6E;2&#64;&#x67;m&#x61;i&#108;&#x2E;&#x63;&#x6F;m">&#97;&#114;&#x6D;&#x61;&#x6E;2&#64;&#x67;m&#x61;i&#108;&#x2E;&#x63;&#x6F;m</a> <br />
+E-mail: <a href="&#109;&#97;il&#116;o:&#97;&#114;&#109;&#x61;&#110;&#50;&#64;&#x67;m&#x61;&#105;&#x6C;&#46;&#x63;&#x6F;&#109;">&#97;&#114;&#109;&#x61;&#110;&#50;&#64;&#x67;m&#x61;&#105;&#x6C;&#46;&#x63;&#x6F;&#109;</a> <br />
 Tel:
 </address></p>
 
@@ -60,57 +95,30 @@ Tel:
 
 <p></p>
 
-		      <div style="clear: both;"></div>
-	         </div>
-		      <hr />
-				<div class ="date">last update: </div>
-	    <div class="footer">
+				 </div>
+   <hr />	
+	</div>
+	<div class="footer">
            <p><a href="index.html">Home</a>|<a href="format.html">Formatting</a>|<a href="images.html">Images</a>|<a href="toc.html">TOC</a>|<a href="latex.html">LaTeX</a>|<a href="Credit.html">Credit</a>|<a href="download.html">Download</a></p>
 
-      </div>  
-	    <div style="clear: both;">&nbsp;</div>
-        </div> <!-- end content -->
-	<!-- in class postandside -->
-
-        <div class="sidebar">
-         	<div class="sider">
-               <p><a href="README.html">README</a>
-<a href="format.html">HTML Formatting</a>
-<a href="latex.html">Writing \( \LaTeX \) </a>
-<a href="toc.html">TOC &amp; References</a>
-<a href="code.html">Code Highlighting</a>
+        </div>
+<div class="side2">
+	<p><a href="Template.html">Home</a>
+<a href="README.html">README</a>
+<a href="format.html">Formatting</a>
+<a href="latex.html"> LaTeX </a>
+<a href="toc.html">TOC</a>
+<a href="code.html">Code</a>
 <a href="images.html">Images</a>
-<a href="Contact.html">Contact</a>
-<a href="Links.html">Links &amp; Lists</a>
-<a href="Credit.html">Credit</a></p>
+<a href="Template.html">Manual</a>
+<a href="download.html">Getting Started</a></p>
 
-<hr />
+</div>
 
-<p><a href="Template.html">Manual</a>
-<a href="download.html">Getting Started</a>
-<a href="download.html">Download<img src="img/dl.svg" /></a>
-<a href="License.html">License</a></p>
+<div style="clear:both"></div>
+</div>
 
-<hr />
-
-<p><a href="page1.html">Browser Page Title</a>
-<a href="page2.html">Page 2</a>
-<a href="page3.html">Page 3</a>
-<a target="_blank" href="../">Arman's page<img style="margin-left:1px;" src="img/external-link.svg" alt="" align="bottom" /></a></p>
-
-             </div>
-         </div> <!--End of Sidebar -->
-
-         <!--in class postandside-->   
-         <!--this line is for compatibility issues --><div style="clear: both;">&#160;</div> <!--Displacement --> 
-     </div> <!--End of post and side -->
-
-     <!-- in class page2 -->
-     <div style="clear: both;">&nbsp;</div>
-  </div> <!--End of Page2 -->
-     <div style="clear: both;">&nbsp;</div>
-
-</div> <!-- End of page -->
-<!--this is end of the file -->
+<div style="clear:both"></div>
+&nbsp;
 </body>
 </html>
