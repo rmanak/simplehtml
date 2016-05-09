@@ -1,6 +1,6 @@
 # Download and Getting Started
 You can download the template and all the required scripts, fonts, CSS sheet, etc. from
-[[here]](../sg.tar.gz)[dl].
+[[here]](../theme4.tar.gz)[dl].
 
 Extract the tarball to your public_html directory on the web server, execute
 ``make``, and you should see a website similar to this page. You can start with
