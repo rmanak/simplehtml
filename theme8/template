@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Arman Akbarian's academic page" />
+<meta name="keywords" content="Arman Akbarian homepage home page webspace website site academic UBC physics" />
+<meta name="author" content="Arman Akbarian" />
+<link rel="stylesheet" type="text/css" href="css/pagestyle.css" />
+<title>Arman's Home</title>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+
+$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+			$('html,body').animate({
+scrollTop: target.offset().top
+}, 500);
+			return false;
+			}
+			}
+			});
+		});
+
+</script>
+
+
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+jQuery("document").ready(function($){
+		    
+	var nav = $('.side2');
+			     
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 200) {
+            nav.fadeIn();
+        } else {
+            nav.fadeOut();
+        }
+    });
+				   
+});
+</script>
+<body>
+<div class="page">&nbsp;</div>
+<div class="pagel">&nbsp;</div>
+<div class="page2">
+
+	<div class="header">
+		<div class="title">PAGE TITLE</div>
+		<div class="subtitle">subtitle</div>
+   </div>
+	<div style="clear:both"> </div>
+	<div class="navbar">
+           KJDSADPFP
+        </div>
+	<div class="content">
+		<div class="post">
+                JDHALOWPFHSNC
+				 </div>
+	</div>
+	<div class="footer">
+		<p>KDLPQHFZVD</p>
+        </div>
+<div class="side2">
+	KJDSADPFP
+</div>
+
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both"></div>
+&nbsp;
+</body>
+</html>

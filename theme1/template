@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="description" />
+<meta name="keywords" content="keywords" />
+<meta name="author" content="author" />
+<link rel="stylesheet" type="text/css" href="css/pagestyle.css" />
+<title>Title</title>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/smoothscroll.js"></script>
+
+
+<body>
+<div class="page">
+  <div class="page2">
+     <div style="width:100%;height:1px;font-family: Tahoma; font-size: 1pt;"></div>
+     <div  class ="header">
+	     <div class="title">
+
+			<img src="img/perl.png" style="float:right" />
+			Page Header
+
+			<div class="subtitle">S U B H E A D E R  </div>
+
+		      <div style="clear: both; height:1px;"></div>
+	</div> <!-- End of title -->
+		
+     </div> <!-- end header -->
+	
+     <!--This line is for future use -->   <div style="text-align:center; padding-top:10px; padding-bottom:10px;"></div>
+	      
+     <!--This line is for compatibility issues --> <div style="width:100%;height:5px;font-family: Tahoma; font-size: 1pt;"></div>
+     <!--in class page2 -->
+     <div class="postandside">
+        <div class="content">
+            <div class="post">
+              JDHALOWPFHSNC
+		      <div style="clear: both;"></div>
+	         </div>
+		      <hr />
+				<div class ="date">last update: ASDLKJFHG</div>
+	    <div class="footer">
+           KDLPQHFZVD
+      </div>  
+	    <div style="clear: both;">&nbsp;</div>
+        </div> <!-- end content -->
+	<!-- in class postandside -->
+
+        <div class="sidebar">
+         	<div class="sider">
+               KJDSADPFP
+             </div>
+         </div> <!--End of Sidebar -->
+
+         <!--in class postandside-->   
+         <!--this line is for compatibility issues --><div style="clear: both;">&#160;</div> <!--Displacement --> 
+     </div> <!--End of post and side -->
+
+     <!-- in class page2 -->
+     <div style="clear: both;">&nbsp;</div>
+  </div> <!--End of Page2 -->
+     <div style="clear: both;">&nbsp;</div>
+
+</div> <!-- End of page -->
+<!--this is end of the file -->
+</body>
+</html>

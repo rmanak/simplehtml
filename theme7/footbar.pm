@@ -1,0 +1,1 @@
+<p><a href="index.html">Home</a>|<a href="format.html">Formatting</a>|<a href="images.html">Images</a>|<a href="toc.html">TOC</a>|<a href="latex.html">LaTeX</a>|<a href="Credit.html">Credit</a>|<a href="download.html">Download</a></p>

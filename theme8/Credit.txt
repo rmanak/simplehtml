@@ -1,0 +1,18 @@
+# Credit:
+
+* [Mathjax[>]](http://www.mathjax.org/)
+* [Markdown[>]](http://daringfireball.net/projects/markdown/)
+* [Code2Html[>]](https://www.palfrader.org/code/code2html/)
+* [PyHat[>]](http://www.ferg.org/pyhat/)
+
+****
+
+#Requirements
+
+* [Perl[>]](http://www.perl.org/) and [Python[>]](https://www.python.org/). (Usually installed on most of the Linux machines.)
+* Linux Make facility (Usually installed on most of the Linux machines.)
+* [Markdown[>]](http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip), (the modified Perl script included in the tarball)
+* [Code2Html[>]](https://www.palfrader.org/code/code2html/)(the  Perl script included in the tarball)
+* [PyHat[>]](http://www.ferg.org/pyhat/pyhat.zip)(the modified python scripts included in the tarball)
+* All the required scripts are included in the [**download package**](../sg.tar.gz)[dl]
+

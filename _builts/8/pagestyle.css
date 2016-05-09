@@ -1,0 +1,295 @@
+@font-face{
+	font-family:'Source Sans Pro';
+	font-style:normal;
+	font-weight:300;
+	src:local('Source Sans Pro Light'),local('SourceSansPro-Light'),url("../fonts/SourceSansPro-Light-webfont.woff") format('woff')
+}
+
+@font-face{
+	font-family:'Source Sans Pro';
+	font-style:normal;
+	font-weight:400;
+	src:local('Source Sans Pro'),local('SourceSansPro'),url("../fonts/SourceSansPro-Regular-webfont.woff") format('woff')
+}
+
+@font-face{
+	font-family:'Source Sans Pro';
+	font-style:normal;
+	font-weight:700;
+	src:local('Source Sans Pro Bold'),local('SourceSansPro-Bold'),url("../fonts/SourceSansPro-Bold-webfont.woff") format('woff')
+}
+
+@font-face{
+	font-family:'Source Sans Pro';
+	font-style:italic;
+	font-weight:300;
+	src:local('Source Sans Pro Light Italic'),local('SourceSansProLight-Italic'),url("../fonts/SourceSansPro-LightItalic-webfont.woff") format('woff')
+}
+
+@font-face{
+	font-family:'Source Sans Pro';
+	font-style:italic;
+	font-weight:400;
+	src:local('Source Sans Pro Italic'),local('SourceSansPro-Italic'),url("../fonts/SourceSansPro-Italic-webfont.woff") format('woff')
+}
+
+@font-face{
+	font-family:'Source Sans Pro';
+	font-style:italic;
+	font-weight:700;
+	src:local('Source Sans Pro Bold Italic'),local('SourceSansPro-BoldItalic'),url("../fonts/SourceSansPro-BoldItalic-webfont.woff") format('woff')
+}
+
+@font-face{
+	font-family:'Source Code Pro';
+	font-style:normal;
+	font-weight:400;
+	src:local('Source Code Pro'),local('SourceCodePro-Regular'),url("../fonts/SourceCodePro-Regular-webfont.woff") format('woff')
+}
+
+@font-face{
+	font-family:'Source Code Pro';
+	font-style:normal;
+	font-weight:700;
+	src:local('Source Code Pro Bold'),local('SourceCodePro-Bold'),url("../fonts/SourceCodePro-Bold-webfont.woff") format('woff')
+}
+
+body {
+font-family:"Source Sans Pro", 'Helvetica Neue', Helvetica, Sans-serif;
+font-size:15px;
+line-height:1.45;
+text-align:left;
+margin:0px;
+padding:0px;
+}
+a {
+	outline: 0;
+}
+
+hr {
+	width:70%;
+	height: 1px;
+	display: block;
+	background-color:#AAAAAA;
+	border:none;
+	text-align:center;
+}
+
+pre {
+	font-family: "Source Code Pro", "Courier New", Courier, monospace;
+	font-size: 14px;
+	line-height:1.45;
+	background-color:#F9F9F9;
+   border-style: dashed;
+   border-width: 1px;
+	border-color: #CCCCCC;
+   padding:5px;
+	margin:5px;
+}
+
+code{
+	background-color:inherit;
+	font-family: "Source Code Pro", "Courier New", Courier, monospace;
+}
+
+blockquote{
+	border-left-style: solid;
+	border-width: 1px;
+	color:#707070;
+	padding-left: 3px;
+}
+blockquote::before{
+content:url('img/double-quote-serif-left.svg');
+opacity:0.5;
+}
+blockquote::after{
+	opacity:0.5;
+content:url('img/double-quote-serif-right.svg')
+}
+
+a:link {
+  color:#225577;
+  text-decoration:none;
+  transition: color 0.1s;
+  }
+a:visited {
+  color:#4679AC;
+  text-decoration:none;
+  }
+a:hover {
+  color:#55BBBB;
+  text-decoration:none;
+  }
+
+
+.page{
+	width:100%;
+	height:200px;
+	background-color:#23456D;
+	background: -webkit-linear-gradient(0deg, #FAFAFA, #23456D); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(0deg, #FAFAFA, #23456D); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(0deg, #FAFAFA,#23456D); /* For Firefox 3.6 to 15 */
+	
+	background: linear-gradient(0deg, #FAFAFA, #DDDDDD); /* Standard syntax (must be last) */
+}
+
+.header {
+	float:right;
+	width:80%;
+	margin:0px auto;
+	background-color:#FAFAFA;
+		     box-shadow: 0px 0px 5px #AAAAAA;
+}
+.header .title{
+position:relative;
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 22pt;
+color:#112233;
+text-align:left;
+padding:20px;
+}
+.header .subtitle{
+font-size: 8pt;
+font-family: "Courier New", Courier, monospace;
+text-align:left;
+margin-left:40px;
+margin-bottom:20px;
+font-weight: bold;
+}
+.pagel{
+	width:100%;
+	height:100px;
+
+}
+.allcont{
+	border:1px solid grey;
+}
+.page2 {
+	width:80%;
+	margin-left:5%;
+	margin-right:auto;
+	margin-top:-240px;
+	min-width:900px;
+}
+
+.content{
+		     box-shadow: 0px 0px 5px #AAAAAA;
+	background-color:#FAFAFA;
+	width: 80%;
+	float: right;
+font-family: "Source Sans Pro", 'Helvetica Neue', Helvetica, Sans-serif;
+color:#333333;
+min-height:400px;
+}
+
+.content p{
+margin-left: 0px; 
+margin-right: 0px; 
+margin-top: 5px; 
+margin-bottom: 5px;
+line-height:1.3em; 
+text-indent: 5px;
+}
+
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+	font-family:inherit;
+   font-weight:300;
+   line-height:1.1;
+   color:inherit
+}
+
+.navbar{
+		     box-shadow: 0px 0px 5px #AAAAAA;
+	background-color:#FAFAFA;
+font-family: Tahoma, Helvetica, Verdana, Geneva, Arial, sans-serif;
+font-size: 9pt;
+text-align:left;
+text-transform: uppercase;
+width:80%;
+float:right;
+text-align:center;
+}
+
+.navbar p{
+margin:0px;
+padding:0px;
+}
+
+.navbar a{
+display:inline-block;
+padding-left:13px;
+padding-right:13px;
+padding-top:10px;
+padding-bottom:10px;
+	text-align:center;
+	   font-size:15px;
+	   font-family: "Source Sans Pro", 'Helvetica Neue', Helvetica, Sans-serif;
+}
+
+.navbar a:link{
+color:#666666;
+transition: background 0.15s;
+} 
+
+.navbar a:visited{
+color:#666666;
+}
+
+.navbar a:hover{ 
+color:#000000;
+background-color:#CCCCCC;
+border-bottom: 3px solid grey;
+padding-bottom: 7px;
+}
+
+.footer{
+	width:80%;
+	float:right;
+font-size: 13px;
+text-align:left;
+color:#555555;
+}
+.footer p{
+	padding-left:20px;
+}
+
+.side2 {
+	text-align:left;
+	position:fixed;
+	width:150px;
+	display:none;
+	box-shadow: 0px 0px 5px #CCCCCC;
+}
+
+.side2 p{
+	margin:0px;
+	padding:0px;
+}
+
+.side2 a{
+	color:#666666;
+	color:inherit;
+	display:block;
+	padding:20px;
+	opacity:0.8;
+	background-color:#EEEEEE;
+	border-bottom:1px solid #DDDDDD;
+}
+
+.side2 a:link{
+color:#666666;
+}
+
+.side2 a:visited{
+color:#666666;
+}
+
+.side2 a:hover{
+	background-color:white;
+}
+
+.post {
+	padding:10px;
+}
+

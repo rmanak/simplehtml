@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="description" />
+<meta name="keywords" content="keywords" />
+<meta name="author" content="author" />
+<link rel="stylesheet" type="text/css" href="css/pagestyle.css" />
+<title>Arman Akbarian's Homepage</title>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+
+$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+			$('html,body').animate({
+scrollTop: target.offset().top
+}, 500);
+			return false;
+			}
+			}
+			});
+		});
+
+</script>
+
+
+</head>
+
+<body>
+<div class="page">
+  <div class="page2">
+     <div style="width:100%;height:1px;font-family: Tahoma; font-size: 1pt;"></div>
+     <div  class ="header">
+		
+	     <div class="title">
+
+			Page Header
+			<div class="subtitle">S U B H E A D E R  </div>
+	</div> <!-- End of title -->
+		<div class="sidebar">
+         	<div class="sider">
+               KJDSADPFP
+             </div>
+         </div> <!--End of Sidebar -->
+
+
+     </div> <!-- end header -->
+	
+	      
+     <!--in class page2 -->
+     <div class="postandside">
+		        <div class="content">
+					  <hr />
+            <div class="post">
+              JDHALOWPFHSNC
+		      <div style="clear: both;"></div>
+	         </div>
+		      <hr />
+	         <div class ="date">last update: ASDLKJFHG</div>
+	    <div class="footer">
+           KDLPQHFZVD
+      </div>  
+	    <div style="clear: both;">&nbsp;</div>
+        </div> <!-- end content -->
+	<!-- in class postandside -->
+
+                 <!--in class postandside-->   
+         <!--this line is for compatibility issues --><div style="clear: both;">&#160;</div> <!--Displacement --> 
+     </div> <!--End of post and side -->
+
+     <!-- in class page2 -->
+     <div style="clear: both;">&nbsp;</div>
+  </div> <!--End of Page2 -->
+     <div style="clear: both;">&nbsp;</div>
+
+</div> <!-- End of page -->
+<!--this is end of the file -->
+<!-- ~~~ This content is generated using sg web template ~~-->
+<!-- ~~~ For more information visit: http://laplace.physics.ubc.ca/People/arman/sg ~~ -->
+</body>
+</html>

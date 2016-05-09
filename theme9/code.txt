@@ -1,0 +1,155 @@
+# Code Highlighting:
+### Perl
+<pre>
+&lt;PERL&gt;
+ #!/usr/bin/perl
+ use strict;
+ use warnings;
+ use IO::Handle;
+ 
+ #Perl comment
+
+ my ( $remaining, $total );
+ 
+ $remaining = $total = shift(@ARGV);
+ 
+ STDOUT->autoflush(1);
+ 
+ while ( $remaining ) {
+  printf ( "Remaining %s/%s \r", $remaining--, $total );
+  sleep 1;
+ }
+ 
+ print "\n";
+&lt/PERL&gt;
+</pre>
+
+Which will be highlighted as:
+
+<PERL>
+ #!/usr/bin/perl
+ use strict;
+ use warnings;
+ use IO::Handle;
+ 
+ #Perl comment
+
+ my ( $remaining, $total );
+ 
+ $remaining = $total = shift(@ARGV);
+ 
+ STDOUT->autoflush(1);
+ 
+ while ( $remaining ) {
+  printf ( "Remaining %s/%s \r", $remaining--, $total );
+  sleep 1;
+ }
+ 
+ print "\n";
+</PERL>
+
+### C++
+
+<pre>
+&lt;CPP&gt;
+#include&lt;iostream&gt;
+#include&lt;vector&gt;
+ 
+int main()
+/* Multiple
+   line comment
+ */
+try {
+    std::vector&lt;int&gt; vec{3,4,3,1};
+    int i{vec.at(4)};
+}
+//An exception handler, catches std::out_of_range
+catch(std::out_of_range& e) {
+    std::cerr&lt;&lt;"Accessing a non-existent element:"&lt;&lte.what()&lt;&lt;'\n';
+}
+catch(std::exception& e) {
+    std::cerr&lt;&lt;"Exception thrown: "&lt;&lt;e.what()&lt;&lt;'\n';
+}
+&lt;/CPP&gt;
+</pre>
+
+And the highlighted version is:
+
+<CPP>
+#include<iostream>
+#include<vector>
+ 
+int main()
+/* Multiple
+   line comment
+ */
+try {
+    std::vector<int> vec{3,4,3,1};
+    int i{vec.at(4)};
+}
+//An exception handler, catches std::out_of_range
+catch(std::out_of_range& e) {
+    std::cerr<<"Accessing a non-existent element: "<<e.what()<<'\n';
+}
+catch(std::exception& e) {
+    std::cerr<<"Exception thrown: "<<e.what()<<'\n';
+}
+</CPP>
+
+
+### PYTHON
+<pre>
+&lt;PYTHON&gt;
+from pylab import *
+
+t = arange(0.0, 2.0, 0.01)
+s = sin(2*pi*t)
+plot(t, s)
+
+xlabel('time (s)')
+ylabel('voltage (mV)')
+title('About as simple as it gets, folks')
+grid(True)
+savefig("test.png")
+show()
+&lt;/PYTHON&gt;
+</pre>
+
+which is highlighted here:
+
+<PYTHON>
+from pylab import *
+
+t = arange(0.0, 2.0, 0.01)
+s = sin(2*pi*t)
+plot(t, s)
+
+xlabel('time (s)')
+ylabel('voltage (mV)')
+title('About as simple as it gets, folks')
+grid(True)
+savefig("test.png")
+show()
+</PYTHON>
+
+### Supported Languages
+
+The supported languages are most of the code2html languages' support:
+
+- C
+- CPP
+- PERL
+- HTL (for html)
+- AWK
+- JAVA
+- PYTHON
+- SH
+- SQL
+- ADA
+- JAVASCRIPT
+- JS
+- MAKE
+- PASCAL
+- RUBY
+- LISP
+

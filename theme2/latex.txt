@@ -1,0 +1,49 @@
+# Writing \\( \LaTeX \\) in HTML
+
+This template is using Mathjax's online JavaScript
+[[+[>]]](http://docs.mathjax.org/en/latest/start.html) to convert
+LaTeX equations to images.
+
+Here is an example  of a formula written in HTML environment:
+``\\( \pi = 4 \sum_{i=0}^{\infty} \frac{(-1)^{i}}{2i+1} \\)``, which
+generates: \\( \pi = 4 \sum_{i=0}^{\infty} \frac{(-1)^{i}}{2i+1} \\).
+All you need to do is simply
+put the equations (in LaTeX syntax) between &#92;&#92;&#40; &#92;&#92;&#41;  tags, for
+inserting the formula inside the text.
+
+Here is another example of creating centered latex equations:
+
+<pre>
+&lt;div&gt;
+$$
+g_{\mu \nu} =  \left( \begin{array}{cccc}
+- \alpha^{2} & \beta &  0  & 0 \\
+\beta & a^{2} & 0 & 0 \\
+0 & 0 & r^{2}  & 0 \\
+0 & 0 & 0 & r^{2} \sin^{2} \theta
+\end{array} \right) \;\;\;
+\int_{-1}^{1} \frac{1}{\sqrt{1-x^{2}}} dx = \pi \;\;\;\;
+1 < 2 \;\;\; 3 &gt; 2
+$$
+&lt;/div&gt;
+</pre>
+
+which will be transformed to:
+
+<div>
+$$
+g_{\mu \nu} =  \left( \begin{array}{cccc}
+- \alpha^{2} & \beta &  0  & 0 \\
+\beta & a^{2} & 0 & 0 \\
+0 & 0 & r^{2}  & 0 \\
+0 & 0 & 0 & r^{2} \sin^{2} \theta
+\end{array} \right) \;\;\;\;
+\int_{-1}^{1} \frac{1}{\sqrt{1-x^{2}}} dx = \pi \;\;\;\;
+1 < 2 \;\;\; 3 > 2
+$$
+</div>
+
+In the previous example ``<div></div>`` tags are necessary to protect the Markdown from
+changing the equation inside.
+
+

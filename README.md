@@ -19,7 +19,7 @@ with my own addition of:
 
 Note: 
 -----
-The keyword in this project is **self-contained**! There are some incredible tools out there,
+The keyword in this project is **"self-contained"**! There are some incredible tools out there,
 including [Kramdown](http://kramdown.gettalong.org/), [Rouge](http://rouge.jneen.net/)
 and [Jekyll](https://jekyllrb.com/) 
 that power github's markdown syntax, highlighting and pages. These tools are arguably better! 
@@ -29,14 +29,41 @@ installed. To get things working using SimpleHTML, all you need is python, perl 
 
 Example:
 -------
-For example see this github page created using this tool:
+For example see these github pages created using this tool:
 
-<http://rmanak.github.io/FD/>
+<http://rmanak.github.io/simplehtml/theme1>
+
+<http://rmanak.github.io/simplehtml/theme2>
+
+<http://rmanak.github.io/simplehtml/theme3>
+
+<http://rmanak.github.io/simplehtml/theme4>
+
+<http://rmanak.github.io/simplehtml/theme5>
+
+<http://rmanak.github.io/simplehtml/theme6>
+
+<http://rmanak.github.io/simplehtml/theme7>
+
+<http://rmanak.github.io/simplehtml/theme8>
+
+<http://rmanak.github.io/simplehtml/theme9>
+
+<http://rmanak.github.io/simplehtml/theme10>
+
+<http://rmanak.github.io/simplehtml/theme11>
+
+<http://rmanak.github.io/simplehtml/theme12>
+
+<http://rmanak.github.io/simplehtml/theme13>
+
+<http://rmanak.github.io/simplehtml/theme14>
 
 
 Software homepage:
 ------------------
-See the homepage of the project: <http://laplace.phas.ubc.ca/People/arman/sg/>
+See the homepage of the project: <http://rmanak.github.io/simplehtml/>
+
 ![alt tag](https://github.com/rmanak/simplehtml/blob/master/img/screenshot.png)
 
 
@@ -129,6 +156,5 @@ Edit the file ``template``.
 * [Markdown](http://daringfireball.net/projects/markdown/)
 * [Code2Html](https://www.palfrader.org/code/code2html/)
 * [PyHat](http://www.ferg.org/pyhat/)
-
 
 

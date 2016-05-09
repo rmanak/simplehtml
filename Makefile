@@ -1,38 +1,17 @@
 .IGNORE:
 SHELL = /bin/bash
 
-SOURCES = Contact.txt  Links.txt download.txt  images.txt  code.txt  page1.txt  page3.txt  Credit.txt     README.txt  Template.txt  format.txt  latex.txt  page2.txt  toc.txt index.txt License.txt
+default: all
 
-pagefiles=$(SOURCES:.txt=.html)
+all:
 
-default: all giveaccess
+dist: _dists_updated _tars_updated theme1
 
-all: $(pagefiles)
+_dists_updated: _dist theme1
+	./create_themes.sh
+	echo "all dist updated" > _dists_updated
 
-footbar.pm: footbar
-	./Markdown.pl footbar > footbar.pm
-
-sidebar.pm: sidebar
-	./Markdown.pl sidebar > sidebar.pm
-
-%.s: %.txt
-	cat $*.txt globalauthor globalkeywords globaldescription  > $*.txt2
-	./find_code.pl < $*.txt2 > $*.s
-	/bin/rm -f *.txt2
-	/bin/rm -f tmp_code_123 tmp_code_1234
-
-%.w: %.s
-	./Markdown.pl $*.s > $*.w
-
-%.html : %.w template footbar.pm sidebar.pm globalkeywords globalauthor globaldescription
-	./preppage.pl template sidebar.pm footbar.pm $*.w | inc_file.pl > $*.html
-	grep 'table_of_contents' $*.html && python ./pyhat.py -d. $*.html || echo $*.html generated
-
-	
-clean:
-	/bin/rm -f $(pagefiles)
-	/bin/rm -f *.txt2
-	
-giveaccess:
-	chmod -R a+r *
+_tars_updated: _dist theme1
+	./pack_tars.sh
+	echo "all tars updated" > _tars_updated
 

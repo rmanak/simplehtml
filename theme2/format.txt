@@ -1,0 +1,153 @@
+# HTML Formatting 
+## Paragraphs
+Paragraphs in Markdown are separated with an empty line, 
+for instance:
+
+	This is paragraph1.
+	This is in the same paragraph.
+
+	This is a new paragraph.
+
+This is paragraph1.
+This is in the same paragraph.
+
+This is a new paragraph.
+
+
+## Lists
+
+Here is how to create lists and sublists:
+
+	* item 1
+	  * subitem 1
+			 * subsub item 1
+	  * subitem 2
+			 * subsub item 1
+			 * subsub item 2
+	* item 3
+
+
+
+* item 1
+  * subitem 1
+       * subsub item 1
+  * subitem 2
+       * subsub item 1
+       * subsub item 2
+* item 3
+
+## Links
+
+    This is [a link](http://en.wikipedia.org/wiki/HTML) example.
+
+This is [a link](http://en.wikipedia.org/wiki/HTML) example.
+
+## Bold Text
+
+    **This line should appear bold.**
+
+**This line should appear bold.**
+
+## Emphasize
+
+
+    Example of emphasize: *Emphasized expression*.
+
+Example of emphasize: *Emphasized expression*.
+
+## Quotation
+
+Here is an example of a quotation:
+
+    > There are only 10 types of people in the world:
+    > those who understand binary,
+    > and those who don't.
+
+
+> There are only 10 types of people in the world:
+> those who understand binary,
+> and those who don't.
+
+
+## Numeric Lists
+
+    List:
+
+    1. foo
+    2. bar
+
+List:
+
+1. foo
+2. bar
+
+## Link by ID
+
+    This is [an example][id] of reference-style link.
+
+    [id]: http://en.wikipedia.org/wiki/Minions_%28film%29 "Title"
+
+
+This is [an example][id] of reference-style link.
+
+[id]: http://en.wikipedia.org/wiki/Minions_%28film%29 "Title"
+
+## Literal Links
+
+Creating a literal hyperlink:
+
+    <http://www.google.com>
+
+<http://www.google.com>
+
+## Quick Images
+A quick way to insert an image is this:
+
+    ![Alt text](img/linuxlogo.png)
+
+![Alt text](img/linuxlogo.png)
+
+## Code
+
+Code example:
+
+    ``for(int i=0;i < n;i++) { a[i] = 0.0}``
+
+``for(int i=0;i < n;i++) { a[i] = 0.0}``
+
+## Pre-defined Format
+
+	This is pre defined format, just shift the lines by a tab:
+
+        [arman@bh8 ~]$ ls -ltr
+        drwxr-xr-x  3 arman choptuik     24576 Aug 31 17:27 BSSN_Axi_compact/
+        drwxr-xr-x  3 arman choptuik     20480 Aug 31 17:27 BSSN_Spher/
+        drwxr-xr-x 31 arman choptuik      4096 Sep  2 10:52 examples/
+        drwxr-xr-x  3 arman choptuik      4096 Sep  2 12:24 Downloads/
+
+This is pre defined format, just shift the lines by a tab:
+
+    [arman@bh8 ~]$ ls -ltr
+    drwxr-xr-x  3 arman choptuik     24576 Aug 31 17:27 BSSN_Axi_compact/
+    drwxr-xr-x  3 arman choptuik     20480 Aug 31 17:27 BSSN_Spher/
+    drwxr-xr-x 31 arman choptuik      4096 Sep  2 10:52 examples/
+    drwxr-xr-x  3 arman choptuik      4096 Sep  2 12:24 Downloads/
+
+ 
+## Drawing Line
+    3 or more stars should create a line:
+
+    ***
+
+3 or more stars should create a line:
+
+***
+
+
+## Differences with Markdown
+I have changed the markdown script so that underscore ``_`` does not
+emphasize the text as it does originally in the Markdown syntax.
+The reason is that markdown syntaxing applies to html files before latexing
+that is a JavaScript, and underscore is used extensively in latex syntax.
+
+

@@ -1,0 +1,680 @@
+
+
+{{
+
+* Table of Content<sup>[[v]](#table_of_contents_1)</sup>
+* References%%ref1%%
+* \\( \LaTeX \\) 
+* <C>
+/* Code Highlighting */
+#include<iostream>
+  </C>
+* <span style="font-size:70%">``*Easy* **HTML** [formatting](#)``</span>
+* *Easy* **HTML** [formatting](#)
+
+}}((img/linuxlogo.png))
+
+{ref1: This is an example of a reference.}
+
+#About This Web Template:
+
+## Features
+
+This template 
+is a [modified] collection of available tools on the web for creating readable
+HTML pages, and enables the users to edit the content using a
+text editor. It is perhaps
+most useful for creating course pages, scientific web pages and
+documentation. It has the following features:
+
+- Allows writing \\( \LaTeX \\) in web using Mathjax%%refmath%%.
+- Provides easy and quick formatting for HTML using Markdown%%refmk%%.
+- Highlights source codes in various languages using code2html%%c2h%%.
+- Creates table of contents for the document using
+  PyHat%%refph%%.
+- Generates references at the bottom of the page automatically.
+- Provides an easy way to insert images with caption.
+- Designed for simplicity, readability and portability (fonts included,
+  web safe fonts, css verified, should work on any Unix-like machine)
+- The content is pure ASCII text files and user interface is via
+command line, good old fashion scientists' style!
+- See other styles of this template: [[2]](../theme2) , [[3]](../theme3)
+   , [[4]](../theme4) , [[5]](../theme5) , [[6]](../theme6) , [[7]](../theme7) ,
+  [[8]](../theme8) ,  [[9]](../theme9) , [[10]](../theme10) , [[11]](../theme11)
+  , [[12]](../theme12) , [[13]](../theme13), [[14]](../theme14) ,   [[1]](../theme1) 
+
+{refmk: Markdown by  John Grube is a text to html conversion
+tool to format and create HTML documents. For more info see the
+[homepage[>]](http://daringfireball.net/projects/markdown/) of
+the software. I have modified this script to not interfere with \\( \LaTeX \\)
+syntax.}
+
+{refmath: MathJax is an open source JavaScript to create LaTeX equations
+on the web, commonly used on Wikipedia and ArXiv. See
+the [homepage of the project[>]](http://www.mathjax.org/) for more info.}
+
+{c2h: For more info visit: <https://www.palfrader.org/code/code2html/>[>]}
+
+{refph: Visit: <http://www.ferg.org/pyhat/>[>]. However I've slightly modified
+the script.}
+
+*Note*: This page itself is generated using this
+website's page generator scripts. [This is the plain txt source file.](Template.txt)
+
+&copy; Arman Akbarian, Summer 2014
+***
+[TOC]
+***
+
+
+## Writing \\( \LaTeX \\) in HTML
+
+This template is using Mathjax's online JavaScript
+[[+[>]]](http://docs.mathjax.org/en/latest/start.html) to convert
+LaTeX equations to images.
+
+Here is an example  of a formula written in HTML environment:
+``\\( \pi = 4 \sum_{i=0}^{\infty} \frac{(-1)^{i}}{2i+1}  \;\;\; \& \;\;\; G_{\mu\nu} = 8\pi T_{\mu\nu} \\)``, which
+generates: \\( \pi = 4 \sum_{i=0}^{\infty} \frac{(-1)^{i}}{2i+1} \;\;\; \& \;\;\; G_{\mu\nu} = 8\pi T_{\mu\nu} \\).
+All you need to do is simply
+put the equations (in LaTeX syntax) between &#92;&#92;&#40; &#92;&#92;&#41;  tags, for
+inserting the formula inside the text.
+
+Here is another example of creating centered latex equations:
+
+<pre>
+&lt;div&gt;
+$$
+g_{\mu \nu} =  \left( \begin{array}{cccc}
+- \alpha^{2} & \beta &  0  & 0 \\
+\beta & a^{2} & 0 & 0 \\
+0 & 0 & r^{2}  & 0 \\
+0 & 0 & 0 & r^{2} \sin^{2} \theta
+\end{array} \right) \;\;\;
+\int_{-1}^{1} \frac{1}{\sqrt{1-x^{2}}} dx = \pi \;\;\;\;
+1 < 2 \;\;\; 3 &gt; 2
+$$
+&lt;/div&gt;
+</pre>
+
+which will be transformed to:
+
+<div>
+$$
+g_{\mu \nu} =  \left( \begin{array}{cccc}
+- \alpha^{2} & \beta &  0  & 0 \\
+\beta & a^{2} & 0 & 0 \\
+0 & 0 & r^{2}  & 0 \\
+0 & 0 & 0 & r^{2} \sin^{2} \theta
+\end{array} \right) \;\;\;\;
+\int_{-1}^{1} \frac{1}{\sqrt{1-x^{2}}} dx = \pi \;\;\;\;
+1 < 2 \;\;\; 3 > 2
+$$
+</div>
+
+In the previous example ``<div></div>`` tags are necessary to protect the Markdown from
+changing the equation inside.
+
+***
+
+## Markdown HTML Formatting
+
+This template is using
+Markdown[[+]](http://daringfireball.net/projects/markdown/) (a Perl script) to
+convert the text files into formatted HTML files. 
+The syntax of Markdown is described in details
+[on the software's webpage[>]](http://daringfireball.net/projects/markdown/syntax).
+You can try Markdown formatting with live preview
+[here](https://stackedit.io/)[>].
+It can also be
+simply understood from the following examples of the *source codes* 
+throughout this document.
+
+### First Markdown Example
+
+This is the first Markdown source code example, which
+is the previous text you just read:
+
+
+	## Markdown HTML Formatting
+
+	This template is using
+	Markdown[[+]](http://daringfireball.net/projects/markdown/) (a Perl script) to
+	convert the text files into formatted HTML files. 
+	The syntax of Markdown is described in details
+	[on the software's webpage[>]](http://daringfireball.net/projects/markdown/syntax).
+	You can try Markdown formatting with live preview
+	[here](https://stackedit.io/)[>].
+	It can also be
+	simply understood from the following examples of the *source codes* 
+	throughout this document.
+	### First Markdown Example
+
+	This is the first Markdown source code example, which
+	is the previous text you just read:
+
+
+
+### Paragraphs
+Paragraphs in Markdown are separated with an empty line, 
+for instance:
+
+	This is paragraph1.
+	This is in the same paragraph.
+
+	This is a new paragraph.
+
+This is paragraph1.
+This is in the same paragraph.
+
+This is a new paragraph.
+
+
+### Lists
+
+Here is how to create lists and sublists:
+
+	* item 1
+	  * subitem 1
+			 * subsub item 1
+	  * subitem 2
+			 * subsub item 1
+			 * subsub item 2
+	* item 3
+
+
+* item 1
+  * subitem 1
+       * subsub item 1
+  * subitem 2
+       * subsub item 1
+       * subsub item 2
+* item 3
+
+### Links
+
+    This is [a link](http://en.wikipedia.org/wiki/HTML) example.
+
+This is [a link](http://en.wikipedia.org/wiki/HTML) example.
+
+### Bold Text
+
+    **This line should appear bold.**
+
+**This line should appear bold.**
+
+### Emphasize
+
+
+    Example of emphasize: *Emphasized expression*.
+
+Example of emphasize: *Emphasized expression*.
+
+### Quotation
+
+Here is an example of a quotation:
+
+    > There are only 10 types of people in the world:
+    > those who understand binary,
+    > and those who don't.
+
+
+> There are only 10 types of people in the world:
+> those who understand binary,
+> and those who don't.
+
+
+### Numeric Lists
+
+    List:
+
+    1. foo
+    2. bar
+
+List:
+
+1. foo
+2. bar
+
+### Link by ID
+
+    This is [an example][id] of reference-style link.
+
+    [id]: http://en.wikipedia.org/wiki/Minions_%28film%29 "Title"
+
+
+This is [an example][id] of reference-style link.
+
+[id]: http://en.wikipedia.org/wiki/Minions_%28film%29 "Title"
+
+### Literal Links
+
+Creating a literal hyperlink:
+
+    <http://www.google.com>
+
+<http://www.google.com>
+
+### Quick Images
+A quick way to insert an image is this:
+
+    ![Alt text](img/linuxlogo.png)
+
+![Alt text](img/linuxlogo.png)
+
+### Code
+
+Code example:
+
+    ``for(int i=0;i < n;i++) { a[i] = 0.0}``
+
+``for(int i=0;i < n;i++) { a[i] = 0.0}``
+
+### Pre-defined Format
+
+
+    This is pre defined format, just shift the lines by a tab:
+
+        [arman@bh8 ~]$ ls -ltr
+        drwxr-xr-x  3 arman choptuik     24576 Aug 31 17:27 BSSN_Axi_compact/
+        drwxr-xr-x  3 arman choptuik     20480 Aug 31 17:27 BSSN_Spher/
+        drwxr-xr-x 31 arman choptuik      4096 Sep  2 10:52 examples/
+        drwxr-xr-x  3 arman choptuik      4096 Sep  2 12:24 Downloads/
+
+
+This is pre defined format, just shift the lines by a tab:
+
+    [arman@bh8 ~]$ ls -ltr
+    drwxr-xr-x  3 arman choptuik     24576 Aug 31 17:27 BSSN_Axi_compact/
+    drwxr-xr-x  3 arman choptuik     20480 Aug 31 17:27 BSSN_Spher/
+    drwxr-xr-x 31 arman choptuik      4096 Sep  2 10:52 examples/
+    drwxr-xr-x  3 arman choptuik      4096 Sep  2 12:24 Downloads/
+
+### Drawing Line
+    3 or more stars should create a line:
+
+    ***
+
+3 or more stars should create a line:
+
+***
+
+
+### Differences with Markdown
+I have changed the markdown script so that underscore ``_`` does not
+emphasize the text as it does originally in the Markdown syntax.
+The reason is that markdown syntaxing applies to html files before latexing
+that is a JavaScript, and underscore is used extensively in latex syntax.
+
+## Images with Caption
+
+### Right Floating Image
+You can insert a right floating image with the syntax:
+
+<pre>
+&#123;&#123;This is the caption of the image. 
+A plot of a function in Python!}}((img/surface.png))
+</pre>
+
+{{This is the caption of the image.
+A plot of a function in Python!}}((img/surface.png))
+
+An example is the image you are seeing on the right.
+
+
+Paragraphs in Markdown are separated with an
+empty line, similar to \\( \LaTeX \\).
+For instance, each
+word
+of
+this
+sentence
+are
+in
+separate
+lines
+in
+the
+[source
+file](Template.txt),
+but they all appear on the same paragraph.
+
+This is a new paragraph to fill up some space. So I will keep typing
+until I created a long paragraph. So far I don't think it is long enough.
+Let me find something from Wikipedia and copy paste it here.
+A paragraph (from the Greek paragraphos, "to write beside" or "written
+beside") is a self-contained unit of a discourse in writing dealing with a
+particular point or idea. A paragraph consists of one or more sentences.
+Though not required by the syntax of any language, paragraphs are usually an
+expected part of formal writing, used to organize longer prose.
+The oldest classical Greek and Latin writing had little or no spaces between
+words or other ones, and could be written in boustrophedon (alternating
+directions). Over time, text direction (left to right) became standardized,
+and word dividers and terminal punctuation became common.
+The first way to divide sentences into groups was the original paragraphos,
+similar to an underscore at the beginning of the new group.[3] The Greek
+paragraphos evolved into the pilcrow), which in English manuscripts in the
+Middle Ages can be seen inserted inline between sentences. The hedera leaf
+ has also been used in the same way.
+There should be an image on the right side of this text.
+An empty line separates the paragraphs.
+
+### Center Floating Image
+
+Another way to insert images with center floating is to
+use syntac:
+
+<pre>&#123;&#123;Images with center floating are
+a bit larger allowing for more content in the
+caption.}}[[img/HTML.jpg]]</pre>
+
+which produces:
+
+{{Images with center floating are
+a bit larger allowing for more content in the
+caption.}}[[img/HTML.jpg]]
+
+Images (centered or right floating) can be inserted without caption as well,
+by simply leaving the caption part completely empty:
+
+<pre>&#123;&#123;}}[[img/HTML.jpg]]</pre>
+
+{{}}[[img/HTML.jpg]]
+
+
+### Right Floating Object
+
+<R><span style="font-size:50px;"> \\( G_{\mu\nu} = 8 \pi T_{\mu\nu} \\)  </span></R>
+
+You can also insert any html content in a right floating box by
+putting it between ``<R></R>``. 
+For instance the
+image of the equation you are seeing on the right hand side is
+in part an html code and in part a latex syntax that is being
+converted using MathJax script. The code
+that generates it is this:
+
+``<R><span style="font-size:50px;">\\(G_{\mu\nu}=8\pi T_{\mu\nu}\\)</span></R>``
+
+Also you can insert any valid HTML content
+in the plain text file. See Makrdown's page %% refmk %% to learn more about how
+it handles the HTML contents.
+
+## Generating Table of Content
+
+This template is using [PyHat](http://www.ferg.org/pyhat/) (a Python script) to
+generate table of content(TOC). The TOC will occur at the location
+specified by: &#91;TOC&#93;. For example the table of content of this
+page is created using this method. See the [source](Template.txt) file
+of the page to find the TOC tag. The following
+headlines will all appear in the TOC at the top:
+
+    ### Subsection
+    to insert a section use level-2 headline: ``##``
+
+    to insert a subsection use level-3 headline: ``###``
+
+    #### subsub section
+    to insert a subsubsection, use level-4 headline: ``####``
+
+    these two subsection and subsubsection will appear in the TOC of this page.
+
+
+
+### Subsection
+to insert a section use level-2 headline: ``##``
+
+to insert a subsection use level-3 headline: ``###``
+
+#### subsub section
+to insert a subsubsection, use level-4 headline: ``####``
+
+these two subsection and subsubsection will appear in the TOC of this page.
+
+***
+
+## Creating References
+
+To create a reference you can put your reference label between two
+&#37;&#37;``myreflabel``&#37;&#37; and add a description to it
+using the syntax:
+
+    {myreflabel: reference description}
+
+For example this  %% myref1 %% is going to appear in the references and this
+%%my ref5%% as well. This %% my ref5  %% is the same reference.
+{myref1: This is an example of references.}
+{ my ref5:  Another reference.}
+The reference description can appear anywhere in the text.
+Below is the source file of the example above:
+
+<pre>
+For example this  &#37;&#37; myref1 &#37;&#37; is going to appear in the references and this
+&#37;&#37;my ref5&#37;% as well. This &#37;&#37; my ref5  &#37;&#37; is the same reference.
+&#123;myref1: This is an example of references.}
+&#123; my ref5:  Another reference.}
+The reference description can appear anywhere in the text.
+Below is the source file of the example above:
+</pre>
+
+
+***
+
+## Code Highlighting
+
+This template is using [code2html[>]](https://www.palfrader.org/code/code2html/)
+to highlight source
+codes that are being inserted in the plain text file.
+
+All you need to do is simply put the source code between &lt;C&gt; &lt;/C&gt;
+tags (for C code). See below for the list of supported languages.
+
+Following source code shows how you can highlight Perl, C++ and Python code:
+
+### Perl
+<pre>
+&lt;PERL&gt;
+ #!/usr/bin/perl
+ use strict;
+ use warnings;
+ use IO::Handle;
+ 
+ #Perl comment
+
+ my ( $remaining, $total );
+ 
+ $remaining = $total = shift(@ARGV);
+ 
+ STDOUT->autoflush(1);
+ 
+ while ( $remaining ) {
+  printf ( "Remaining %s/%s \r", $remaining--, $total );
+  sleep 1;
+ }
+ 
+ print "\n";
+&lt/PERL&gt;
+</pre>
+
+Which will be highlighted as:
+
+<PERL>
+ #!/usr/bin/perl
+ use strict;
+ use warnings;
+ use IO::Handle;
+ 
+ #Perl comment
+
+ my ( $remaining, $total );
+ 
+ $remaining = $total = shift(@ARGV);
+ 
+ STDOUT->autoflush(1);
+ 
+ while ( $remaining ) {
+  printf ( "Remaining %s/%s \r", $remaining--, $total );
+  sleep 1;
+ }
+ 
+ print "\n";
+</PERL>
+
+### C++
+
+<pre>
+&lt;CPP&gt;
+#include&lt;iostream&gt;
+#include&lt;vector&gt;
+ 
+int main()
+/* Multiple
+   line comment
+ */
+try {
+    std::vector&lt;int&gt; vec{3,4,3,1};
+    int i{vec.at(4)};
+}
+//An exception handler, catches std::out_of_range
+catch(std::out_of_range& e) {
+    std::cerr&lt;&lt;"Accessing a non-existent element:"&lt;&lte.what()&lt;&lt;'\n';
+}
+catch(std::exception& e) {
+    std::cerr&lt;&lt;"Exception thrown: "&lt;&lt;e.what()&lt;&lt;'\n';
+}
+&lt;/CPP&gt;
+</pre>
+
+And the highlighted version is:
+
+<CPP>
+#include<iostream>
+#include<vector>
+ 
+int main()
+/* Multiple
+   line comment
+ */
+try {
+    std::vector<int> vec{3,4,3,1};
+    int i{vec.at(4)};
+}
+//An exception handler, catches std::out_of_range
+catch(std::out_of_range& e) {
+    std::cerr<<"Accessing a non-existent element: "<<e.what()<<'\n';
+}
+catch(std::exception& e) {
+    std::cerr<<"Exception thrown: "<<e.what()<<'\n';
+}
+</CPP>
+
+
+### PYTHON
+<pre>
+&lt;PYTHON&gt;
+from pylab import *
+
+t = arange(0.0, 2.0, 0.01)
+s = sin(2*pi*t)
+plot(t, s)
+
+xlabel('time (s)')
+ylabel('voltage (mV)')
+title('About as simple as it gets, folks')
+grid(True)
+savefig("test.png")
+show()
+&lt;/PYTHON&gt;
+</pre>
+
+which is highlighted here:
+
+<PYTHON>
+from pylab import *
+
+t = arange(0.0, 2.0, 0.01)
+s = sin(2*pi*t)
+plot(t, s)
+
+xlabel('time (s)')
+ylabel('voltage (mV)')
+title('About as simple as it gets, folks')
+grid(True)
+savefig("test.png")
+show()
+</PYTHON>
+
+### Supported Languages
+
+The supported languages are most of the code2html languages' support:
+
+- C
+- CPP
+- PERL
+- HTL (for html)
+- AWK
+- JAVA
+- PYTHON
+- SH
+- SQL
+- ADA
+- JAVASCRIPT
+- JS
+- MAKE
+- PASCAL
+- RUBY
+- LISP
+
+****
+
+##Including File
+You can include other html files or text in your source code using:
+
+<pre>
+&lt;FILE="myfile.html"&gt;
+</pre>
+
+****
+
+##Requirements
+
+* [Perl[>]](http://www.perl.org/) and [Python[>]](https://www.python.org/). (Usually installed on most of the Linux machines.)
+* Linux Make facility (Usually installed on most of the Linux machines.)
+* [Markdown[>]](http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip), (the modified Perl script included in the tarball)
+* [Code2Html[>]](https://www.palfrader.org/code/code2html/)(the  Perl script included in the tarball)
+* [PyHat[>]](http://www.ferg.org/pyhat/pyhat.zip)(the modified python scripts included in the tarball)
+* All the required scripts are included in the [**download package**](../theme1.tar.gz)[dl]
+
+****
+
+## Credit
+
+* [Mathjax[>]](http://www.mathjax.org/)
+* [Markdown[>]](http://daringfireball.net/projects/markdown/)
+* [Code2Html[>]](https://www.palfrader.org/code/code2html/)
+* [PyHat[>]](http://www.ferg.org/pyhat/)
+
+****
+
+## Live Preview
+This page itself is a preview of the template.
+
+****
+
+## Download and Getting Started
+You can download the template and all the required scripts, fonts, CSS sheet, etc. from
+[[here]](../theme1.tar.gz).
+
+Extract the tarball to your public_html directory on the web server, execute
+``make``, and you should see a website similar to this page. You can start with
+editing the ``README.txt`` file and re-executing the ``make`` command.
+
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+  </p>
+
+
