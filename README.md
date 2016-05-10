@@ -14,21 +14,26 @@ with my own addition of:
 * Latex (needed some hacking to markdown script) to get it to work with MathJax
 * Quick centered/right floating images with caption
 * Include other HTML files
-* All fonts included
-* All scripts are included, no need to download anything beside the project
+* All scripts are included, no need to download/install anything else
 
 Note: 
 -----
 The keyword in this project is **"self-contained"**! There are some incredible tools out there,
 including [Kramdown](http://kramdown.gettalong.org/), [Rouge](http://rouge.jneen.net/)
 and [Jekyll](https://jekyllrb.com/) 
-that power github's markdown syntax, highlighting and pages. These tools are arguably better! 
+that power github's markdown syntax, code highlighting and pages. These tools are arguably better! 
 However, they require
-a bit of learning curve and some libraries and having ruby 
-installed. To get things working using SimpleHTML, all you need is python, perl and linux make.
+a bit of learning curve and some installation of other tools.
+To get things working using SimpleHTML, all you need is python, perl and linux make.
 
-Example:
--------
+Software homepage:
+------------------
+See the homepage of the project: <http://rmanak.github.io/simplehtml/>
+
+![alt tag](https://github.com/rmanak/simplehtml/blob/master/img/screenshot.png)
+
+0. Example:
+-----------
 For example see these github pages created using this tool:
 
 <http://rmanak.github.io/simplehtml/theme1>
@@ -60,11 +65,6 @@ For example see these github pages created using this tool:
 <http://rmanak.github.io/simplehtml/theme14>
 
 
-Software homepage:
-------------------
-See the homepage of the project: <http://rmanak.github.io/simplehtml/>
-
-![alt tag](https://github.com/rmanak/simplehtml/blob/master/img/screenshot.png)
 
 
 1. Quick Start
