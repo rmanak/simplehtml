@@ -58,7 +58,7 @@ $FOOTBARTXT=&file_to_text($foot_file);
 
 #$date="$lstupddayw $lstupdmon $lstupddaynum, $lstupdyear";
 
-$date = `mydate.py $post_filet`;
+$date = `./bin/mydate.py $post_filet`;
 chomp $date;
 
 $title='';
