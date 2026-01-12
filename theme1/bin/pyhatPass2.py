@@ -3,14 +3,13 @@ REVISION HISTORY
  4 2004-11-10 renamed program to "pyhat.py"
 --------------------------------------------------------------------"""
 
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 import getopt
 import sys
 import os
 import time
 import string
-import cgi
-from   pyhatConstants import *
+from pyhatConstants import *
 
 #-----------------------------------------------------------
 #
@@ -36,7 +35,7 @@ class WorkfileDocumentComponent:
 		if self.myDocumentState == STATE_Heading:
 			try:
 				self.myHeadingLevel = int(self.myStartTag[2])
-			except Exception, e:
+			except Exception as e:
 				errorMessage(
 					"Error when attempting to extract header level "
 					+ " from tag: '" + self.myStartTag)
@@ -48,8 +47,8 @@ class WorkfileDocumentComponent:
 		self.myText +=  argText
 
 	def replaceText(self, argText):
-		if optionVerbose: 
-			print "\tCreating new table of contents"
+		if optionVerbose:
+			print("\tCreating new table of contents")
 		self.myText = argText
 
 	def setOutlineNumber(self, argText):
@@ -67,7 +66,7 @@ class WorkfileDocumentComponent:
 				if len(aListOfWordsInHeading) > 0:
 					if optionQuiet: pass
 					else:
-						print "\tRemoving", self.myStartTag, "word1:", aListOfWordsInHeading[0]
+						print("\tRemoving", self.myStartTag, "word1:", aListOfWordsInHeading[0])
 					aListOfWordsInHeading = aListOfWordsInHeading[1:]
 
 			self.myText = " ".join(aListOfWordsInHeading)
@@ -105,8 +104,10 @@ class WorkfileDocumentComponent:
 	def getTextOfLineInTableOfContents(self):
 		# this method will be executed for STATE_Heading components only
 		if self.myDocumentState == STATE_Heading: pass # no problem
-		else:  raise ("Program logic error: component.getTextOfLineInTableOfContents() method "
-			+ "called for a document component that is not a header"
+		else:
+			raise Exception(
+				"Program logic error: component.getTextOfLineInTableOfContents() method "
+				+ "called for a document component that is not a header"
 			)
 
 		# Here's where we put the limit on the deepest header to use int
@@ -170,19 +171,26 @@ class WorkfileParser(HTMLParser):
 	def getConstructedDocument(self):
 		s = ""
 		if optionVerbose:
-			print ("\n"*6)+ "Components in my document:\n"
+			print(("\n" * 6) + "Components in my document:\n")
 		i = 0
 		for component in self.myDocument:
 			i += 1
 			if optionVerbose:
-				print ("\n"
-				+ ("~"*70) + "\n"
-				+ "   Component number "+ str(i)
-				+ "   Component type: " + component.myDocumentState + "\n"
-				+ ("~"*70) + "\n"
-				+ component.toString()
-				+ "\n"
-				+ ("~"*70) + "\n"
+				print(
+					"\n"
+					+ ("~" * 70)
+					+ "\n"
+					+ "   Component number "
+					+ str(i)
+					+ "   Component type: "
+					+ component.myDocumentState
+					+ "\n"
+					+ ("~" * 70)
+					+ "\n"
+					+ component.toString()
+					+ "\n"
+					+ ("~" * 70)
+					+ "\n"
 				)
 			s += component.toString()
 		return s
@@ -194,8 +202,8 @@ class WorkfileParser(HTMLParser):
 		"""Put in the multi-level numbers"""
 		aNumbersForLevels = [0,0,0,0,0,0,0,0]
 
-		if optionVerbose: 
-			print "\tRenumbering content items..."
+		if optionVerbose:
+			print("\tRenumbering content items...")
 		holdLevel = 0
 		for aComponent in self.myListOfHeadingTags:
 			aHeadingTagLevel = aComponent.myHeadingLevel
@@ -214,8 +222,8 @@ class WorkfileParser(HTMLParser):
 			while i <= aHeadingTagLevel:
 				aComponent.setOutlineNumber(aComponent.myOutlineNumber + "." + str(aNumbersForLevels[i]))
 				i += 1
-			if optionVerbose: 
-				print "\t\t", aComponent.myStartTag, aComponent.myOutlineNumber
+			if optionVerbose:
+				print("\t\t", aComponent.myStartTag, aComponent.myOutlineNumber)
 
 			holdLevel = aHeadingTagLevel
 
@@ -260,9 +268,9 @@ class WorkfileParser(HTMLParser):
 		theTableOfContentsText += '</table>\n<!-- %s _END_ TABLE OF CONTENTS %s -->\n' %(TILDES, TILDES)
 		theTableOfContentsText += '</div>'
 
-		if optionVerbose: 
-			print "\n\tNumber of head <h#> entries =", str(len(self.myListOfHeadingTags))
-			print INSERTING_TOC_MESSAGE
+		if optionVerbose:
+			print("\n\tNumber of head <h#> entries =", str(len(self.myListOfHeadingTags)))
+			print(INSERTING_TOC_MESSAGE)
 			
 		# now that we've generated the table of contents text, we go looking
 		# for a place to put it.
@@ -276,8 +284,8 @@ class WorkfileParser(HTMLParser):
 		# we couldn't find a place to put the table of contents
 		#-----------------------------------------------------------------
 		if optionVerbose: 
-			print "Guessing where to insert TableOfContents"
-			print INSERTING_TOC_MESSAGE
+			print("Guessing where to insert TableOfContents")
+			print(INSERTING_TOC_MESSAGE)
 			
 		# We insert a place to put the table of contents.
 		# We try put it before the third component, which presumably
@@ -436,11 +444,13 @@ class WorkfileParser(HTMLParser):
 
 	def ShowEventString(self, argString):
 		if optionVerbose:
-			print (
+			print(
 				str(self.getpos()[0]).rjust(5)
 				+ ":"
-				+ str(self.getpos()[1]).ljust(3)
-				), self.myState, argString
+				+ str(self.getpos()[1]).ljust(3),
+				self.myState,
+				argString,
+			)
 		return
 
 
@@ -581,7 +591,7 @@ class WorkfileParser(HTMLParser):
 					tagLevel = int(argTag[1])
 					if tagLevel == i:
 						return True
-				except ValueError, e:
+				except ValueError:
 					return False
 			return False
 		else:

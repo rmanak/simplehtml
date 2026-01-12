@@ -2,7 +2,7 @@
 import dataclasses
 import os
 import re
-import subprocess
+from datetime import datetime
 import sys
 from typing import Dict, Iterable, Tuple
 
@@ -34,7 +34,11 @@ def post_source_name(post_path: str) -> str:
 
 
 def render_date(post_path: str) -> str:
-    return subprocess.check_output(["./bin/mydate.py", post_path]).decode().strip()
+    try:
+        modified_time = os.path.getmtime(post_path)
+        return datetime.fromtimestamp(modified_time).strftime("%a %b %d %Y")
+    except OSError:
+        return ""
 
 
 def extract_metadata(post_text: str) -> Tuple[Dict[str, str], str]:
@@ -58,7 +62,13 @@ def extract_metadata(post_text: str) -> Tuple[Dict[str, str], str]:
 
 def update_meta_tags(template: str, metadata: Dict[str, str]) -> str:
     if "title" in metadata:
-        template = re.sub(r"<title>.*</title>", f"<title>{metadata['title']}</title>", template, flags=re.DOTALL)
+        title_text = metadata["title"]
+        template = re.sub(
+            r"<title>.*</title>",
+            lambda _match: f"<title>{title_text}</title>",
+            template,
+            flags=re.DOTALL,
+        )
 
     meta_patterns = {
         "keywords": r'(<meta name="keywords" content=")([^"]*)(" />)',
@@ -68,7 +78,13 @@ def update_meta_tags(template: str, metadata: Dict[str, str]) -> str:
 
     for key, pattern in meta_patterns.items():
         if key in metadata:
-            template = re.sub(pattern, rf"\1{metadata[key]}\3", template, flags=re.DOTALL)
+            value = metadata[key]
+            template = re.sub(
+                pattern,
+                lambda match, value=value: f"{match.group(1)}{value}{match.group(3)}",
+                template,
+                flags=re.DOTALL,
+            )
 
     return template
 
@@ -197,7 +213,7 @@ def replace_placeholders(
         tokens.footer_token: footer_text,
     }
     for source, target in replacements.items():
-        template = re.sub(re.escape(source), target, template)
+        template = template.replace(source, target)
     return template
 
 

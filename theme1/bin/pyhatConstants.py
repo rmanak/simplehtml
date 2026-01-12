@@ -1,12 +1,12 @@
 """Constants for the pyhat program """
 
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 import getopt
 import sys
 import os
 import time
 import string
-import cgi
+import html
 
 #----- some constants used in verbose display ------
 PASS1_MESSAGE = """
@@ -102,7 +102,7 @@ TABLE_OF_CONTENTS_PLACEHOLDER = """<div class="table_of_contents">
 #-----------------------------------------------------------
 def toHtmlText(argString):
 	"""Convert special characters in a string to HTML elements.	"""
-	return cgi.escape(argString)
+	return html.escape(argString)
 	
 def virtualPrint(s):
 	"""add string s to the errorOutput string for CGI.
@@ -120,9 +120,9 @@ def iso_date(sep = "-"):
 	"""Return the current date in ISO-standard format
 	"""
 	year, month, day, hour, minute, second, weekday, julianday, dst = time.localtime(time.time())
-	year_AsPaddedText  = string.zfill(year , 4)
-	month_AsPaddedText  = string.zfill(month, 2)
-	day_AsPaddedText   = string.zfill(day  , 2)
+	year_AsPaddedText = str(year).zfill(4)
+	month_AsPaddedText = str(month).zfill(2)
+	day_AsPaddedText = str(day).zfill(2)
 	return year_AsPaddedText +sep +month_AsPaddedText +sep +day_AsPaddedText
 
 
@@ -130,9 +130,9 @@ def iso_time(sep = ":"):
 	"""Return the current time in ISO-standard format
 	"""
 	year, month, day, hour, minute, second, weekday, julianday, dst = time.localtime(time.time())
-	hour_text_AsPaddedText   = string.zfill(hour  , 2)
-	minute_text_AsPaddedText  = string.zfill(minute, 2)
-	second_text_AsPaddedText  = string.zfill(second, 2)
+	hour_text_AsPaddedText = str(hour).zfill(2)
+	minute_text_AsPaddedText = str(minute).zfill(2)
+	second_text_AsPaddedText = str(second).zfill(2)
 	return  hour_text_AsPaddedText +sep +minute_text_AsPaddedText +sep +second_text_AsPaddedText
 
 

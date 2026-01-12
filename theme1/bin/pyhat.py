@@ -50,16 +50,15 @@ REVISION HISTORY
  4 2004-11-10 modularized the code and implemented CGI support
 --------------------------------------------------------------------"""
 
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 import getopt
 import sys
 import os
 import time
 import string
-import cgi
-from   pyhatConstants import *
-from   pyhatPass1     import *
-from   pyhatPass2     import *
+from pyhatConstants import *
+from pyhatPass1 import *
+from pyhatPass2 import *
 
 # the defaults are for CGI processing
 optionOutputDir ="pyhat_out"
@@ -71,8 +70,9 @@ optionRemoveHeadingWord1 = False
 
 def processDocument(aDocument, argRunMode):
 
-	aDocument = runPass1OnDocument(aDocument, optionQuiet, optionVerbose)		
-	if optionVerbose: print "Run mode is:", argRunMode	
+	aDocument = runPass1OnDocument(aDocument, optionQuiet, optionVerbose)
+	if optionVerbose:
+		print("Run mode is:", argRunMode)
 	
 	if argRunMode == RUNMODE_REMOVE:
 		# Our job is merely to remove the old tags.
@@ -85,7 +85,8 @@ def processDocument(aDocument, argRunMode):
 		# table of contents.  So we run the document that we have
 		# created through a second parser.  This parser re-creates
 		# the TableOfContents and its associated links.
-		if optionVerbose: print PASS2_MESSAGE
+		if optionVerbose:
+			print(PASS2_MESSAGE)
 		return runPass2OnDocument(aDocument, 
 			optionQuiet, 
 			optionVerbose, 
@@ -104,8 +105,8 @@ def main():
 	try:
 		# options that require an argument are followed by a colon
 		cmdlineOptions, args= getopt.getopt(sys.argv[1:],'d:h:vqwx')
-	except getopt.GetoptError, e:
-		raise "Error in a command-line option:\n\t" + str(e)
+	except getopt.GetoptError as e:
+		raise Exception("Error in a command-line option:\n\t" + str(e))
 
 	optionH = False	
 	for (optName,optValue) in cmdlineOptions:
@@ -120,12 +121,16 @@ def main():
 						+"\nValue must be an integer in the range of 2..6"
 						)
 					errorEnd()
-			except ValueError, e:
-					print ("Invalid argument value for option "
-						+ optName + ". It is: '" + optValue + "'"
-						+"\nValue must be an integer in the range of 2..6"
-						)
-					errorEnd()
+			except ValueError:
+				print(
+					"Invalid argument value for option "
+					+ optName
+					+ ". It is: '"
+					+ optValue
+					+ "'"
+					+ "\nValue must be an integer in the range of 2..6"
+				)
+				errorEnd()
 					
 		elif optName == '-d': optionOutputDir = optValue
 		elif optName == '-x': optionRunMode = RUNMODE_REMOVE
@@ -136,16 +141,22 @@ def main():
 			errorHandler('Option %s not recognized' % optName)
 
 	if optionRunMode == RUNMODE_REMOVE and optionRemoveHeadingWord1:
-		raise "\nOption -x (remove ToC markup) and option -w (remove first word of headings)"\
+		raise Exception(
+			"\nOption -x (remove ToC markup) and option -w (remove first word of headings)"
 			"\ncannot both be specified."
+		)
 
 	if optionRunMode == RUNMODE_REMOVE and optionH:
-		raise "\nOption -x (remove ToC markup) and option -h (deepest heading level)"\
+		raise Exception(
+			"\nOption -x (remove ToC markup) and option -h (deepest heading level)"
 			"\ncannot both be specified."
+		)
 						
 	if optionQuiet and optionVerbose:
-		raise "\nOption -q (quiet) and option -v (verbose)"\
-			"\ncannot both be specified."			
+		raise Exception(
+			"\nOption -q (quiet) and option -v (verbose)"
+			"\ncannot both be specified."
+		)
 	
 	if d_exists(optionOutputDir): pass
 	else: 
@@ -153,16 +164,16 @@ def main():
 
 	if d_exists(optionOutputDir): pass
 	else: 
-		raise "I couldn't find or create output directory: " + optionOutputDir
+		raise Exception("I couldn't find or create output directory: " + optionOutputDir)
 			
 	if len(args) == 0:
-		print __doc__
+		print(__doc__)
 		sys.exit()
 		
 	
 	if optionVerbose:
-		print "\n\nStarting pyhat"
-		print "Command-line options are:"
+		print("\n\nStarting pyhat")
+		print("Command-line options are:")
 		for (optName,optValue) in cmdlineOptions:
 			virtualPrint( "\t" + optName + ": " + optValue)
 	
@@ -174,17 +185,20 @@ def main():
 		outFilename  = os.path.normpath("%s/%s" % (optionOutputDir , tail))
 	
 		if optionQuiet: pass
-		elif optionVerbose: print PASS1_MESSAGE
+		elif optionVerbose:
+			print(PASS1_MESSAGE)
 		else:
-			print "    (%s) infile='%s'  outfile='%s'" \
+			print(
+				"    (%s) infile='%s'  outfile='%s'"
 				% (str(fcount), inFilename, outFilename)
+			)
 		
 		aDocument = getDocumentText(inFilename)
 		aDocument = processDocument(aDocument, optionRunMode)
 		writeOutputDocument(aDocument, outFilename)
 	
 		if optionVerbose:
-			print "Ending pyhat: output file is", outFilename
+			print("Ending pyhat: output file is", outFilename)
 	
 
 if __name__ == "__main__": 
