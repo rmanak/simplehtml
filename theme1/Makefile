@@ -1,10 +1,10 @@
 
 SHELL = /bin/bash
 
-MD = ./bin/Markdown.pl
-FC = ./bin/find_code.pl
-PP = ./bin/preppage.pl
-INCF = ./bin/inc_file.pl
+MD = ./bin/Markdown.py
+FC = ./bin/find_code.py
+PP = ./bin/preppage.py
+INCF = ./bin/inc_file.py
 TOCGEN = ./bin/pyhat.py 
 MC = _metacontent
 
@@ -46,4 +46,3 @@ clean:
 	
 giveaccess:
 	chmod -R a+r *
-
