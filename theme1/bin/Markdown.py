@@ -3,7 +3,7 @@ import argparse
 import html
 import re
 import sys
-from typing import Iterable, List, Tuple
+from typing import Iterable, List, Optional, Tuple
 
 
 def _normalize_newlines(text: str) -> str:
@@ -21,7 +21,7 @@ def _is_hr(block: str) -> bool:
     return re.match(r"\s*(\*\s*){3,}$", block) or re.match(r"\s*(-\s*){3,}$", block)
 
 
-def _setext_heading(block: str) -> Tuple[int, str] | None:
+def _setext_heading(block: str) -> Optional[Tuple[int, str]]:
     lines = block.split("\n")
     if len(lines) == 2:
         if re.match(r"^=+\s*$", lines[1]):
@@ -31,7 +31,7 @@ def _setext_heading(block: str) -> Tuple[int, str] | None:
     return None
 
 
-def _atx_heading(block: str) -> Tuple[int, str] | None:
+def _atx_heading(block: str) -> Optional[Tuple[int, str]]:
     match = re.match(r"^(#{1,6})\s*(.*?)\s*#*\s*$", block)
     if match:
         return len(match.group(1)), match.group(2)
@@ -174,7 +174,11 @@ def main() -> None:
         sys.stdout.write(version)
         return
 
-    text = sys.stdin.read()
+    if _unknown:
+        with open(_unknown[0], "r", encoding="utf-8") as handle:
+            text = handle.read()
+    else:
+        text = sys.stdin.read()
     html_output = markdown(text)
     if args.html4tags:
         html_output = html_output.replace(" />", ">")
