@@ -2,7 +2,7 @@
 import dataclasses
 import os
 import re
-import subprocess
+from datetime import datetime
 import sys
 from typing import Dict, Iterable, Tuple
 
@@ -34,7 +34,11 @@ def post_source_name(post_path: str) -> str:
 
 
 def render_date(post_path: str) -> str:
-    return subprocess.check_output(["./bin/mydate.py", post_path]).decode().strip()
+    try:
+        modified_time = os.path.getmtime(post_path)
+        return datetime.fromtimestamp(modified_time).strftime("%a %b %d %Y")
+    except OSError:
+        return ""
 
 
 def extract_metadata(post_text: str) -> Tuple[Dict[str, str], str]:
