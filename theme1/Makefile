@@ -8,6 +8,14 @@ INCF = ./bin/inc_file.py
 TOCGEN = ./bin/pyhat.py 
 MC = _metacontent
 
+# Find the Python executable path
+PYTHON_EXECUTABLE := $(shell command -v python3 || command -v python || where python)
+
+# Check if Python executable was found, otherwise stop the make process
+ifndef PYTHON_EXECUTABLE
+$(error Python executable not found. Please install Python or add it to your PATH.)
+endif
+
 
 SOURCES = Contact.txt  Links.txt download.txt  images.txt  code.txt  page1.txt  page3.txt  Credit.txt     README.txt  Template.txt  format.txt  latex.txt  page2.txt  toc.txt index.txt License.txt
 
@@ -37,7 +45,7 @@ sidebar.pm: sidebar
 
 %.html : %.w template footbar.pm sidebar.pm $(MC)
 	@$(PP) template sidebar.pm footbar.pm $*.w | $(INCF) > $*.html
-	@grep 'table_of_contents' $*.html && python $(TOCGEN) -d. $*.html 2>&1 > /dev/null || echo ""
+	@grep 'table_of_contents' $*.html && $(PYTHON_EXECUTABLE) $(TOCGEN) -d. $*.html 2>&1 > /dev/null || echo ""
 	@echo $*.html created
 	
 clean:

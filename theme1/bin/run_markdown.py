@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import re
 import sys
 
 import markdown
@@ -11,9 +10,19 @@ def main() -> None:
             text = handle.read()
     else:
         text = sys.stdin.read()
-    escaped_text = re.sub(r"(?<!\\)_", r"\_", text)
-    html_output = markdown.markdown(escaped_text, output_format="html5")
-    sys.stdout.write(html_output)
+
+    html = markdown.markdown(
+        text,
+        extensions=[
+            "pymdownx.arithmatex",
+        ],
+        extension_configs={
+            "pymdownx.arithmatex": {
+                "generic": True
+            }
+        }
+    )
+    sys.stdout.write(html)
 
 
 if __name__ == "__main__":

@@ -7,17 +7,13 @@
 <a href="Contact.html">Contact</a>
 <a href="Links.html">Links &amp; Lists</a>
 <a href="Credit.html">Credit</a></p>
-
 <hr />
-
 <p><a href="Template.html">Manual</a>
 <a href="download.html">Getting Started</a>
 <a href="download.html">Download[dl]</a>
 <a href="License.html">License</a></p>
-
 <hr />
-
 <p><a href="page1.html">Browser Page Title</a>
 <a href="page2.html">Page 2</a>
 <a href="page3.html">Page 3</a>
-<a target="_blank" href="../">Arman's page[>]</a></p>
+<a target="_blank" href="../">Arman's page[&gt;]</a></p>
