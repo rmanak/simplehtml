@@ -22,10 +22,9 @@
      <div  class ="header">
 	     <div class="title">
 
-			<img src="img/perl.png" style="float:right" />
 			Page Header
 
-			<div class="subtitle">S U B H E A D E R  </div>
+			<div class="subtitle">Subheader  </div>
 
 		      <div style="clear: both; height:1px;"></div>
 	</div> <!-- End of title -->
