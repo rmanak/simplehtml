@@ -11,7 +11,7 @@ Compare the HTML output from the Perl and Python entry points:
 
 ```
 ./bin/Markdown.pl < Template.txt > /tmp/md-perl.html
-./bin/Markdown.py < Template.txt > /tmp/md-python.html
+./bin/run_markdown.py < Template.txt > /tmp/md-python.html
 diff -u /tmp/md-perl.html /tmp/md-python.html
 ```
 

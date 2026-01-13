@@ -1,7 +1,7 @@
 
 SHELL = /bin/bash
 
-MD = ./bin/Markdown.py
+MD = ./bin/run_markdown.py
 FC = ./bin/find_code.py
 PP = ./bin/preppage.py
 INCF = ./bin/inc_file.py
